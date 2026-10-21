@@ -552,6 +552,15 @@ canvas.ripple.ready{opacity:1;transition:opacity .45s}
 @media (min-width:821px) and (max-width:1649px){
   .story-p b{white-space:normal}
 }
+
+/* 桌面端限定（2026-10-21）：≤820px 显示阻断层，仅支持网页版 */
+.mobile-block{display:none}
+@media (max-width:820px){
+  .mobile-block{display:flex;position:fixed;inset:0;z-index:999999;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;background:#05070C;padding:40px 32px;color:var(--paper);font-family:var(--sans)}
+  .mb-kicker{font-size:10px;letter-spacing:.32em;text-indent:.32em;color:var(--muted);opacity:.85}
+  .mb-title{font-family:var(--serif);font-weight:700;font-size:22px;letter-spacing:.14em;text-indent:.14em}
+  .mb-sub{font-size:12px;line-height:2;letter-spacing:.06em;color:var(--muted)}
+}
 </style>
 <div class="load" aria-hidden="true"><div class="load-in"><p class="load-k">THE PLUMB LINE · 10,935 M DOWN</p><div class="load-n">0000</div><p class="load-m">米 · 正在放线</p><div class="load-bar"><i></i></div></div></div>
 <div class="bg-layer" aria-hidden="true">
@@ -1970,4 +1979,10 @@ canvas.ripple.ready{opacity:1;transition:opacity .45s}
   requestAnimationFrame(tick);
 
 })();
+
 </script>
+<div class="mobile-block" aria-hidden="true">
+  <p class="mb-kicker">桌面端限定 · DESKTOP ONLY</p>
+  <p class="mb-title">本网站仅支持电脑访问</p>
+  <p class="mb-sub">请在桌面浏览器中打开，获得完整的深海观影体验<br>Please open this site on a desktop browser</p>
+</div>
