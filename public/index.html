@@ -970,7 +970,7 @@ body.motion .hero-stats .view-btn { animation-delay: 1.25s; }
 /* ================= 鼠标动效（2026-10-21 补齐，同主页/物种库）：光标点+辉光（涟漪不移植） ================= */
 .cursor-dot{position:fixed;top:0;left:0;width:20px;height:20px;border:1px solid var(--text);border-radius:50%;background:rgba(78,205,196,.08);box-shadow:0 0 12px 0 rgba(78,205,196,.5);z-index:999999;pointer-events:none;opacity:0;transition:opacity .16s cubic-bezier(.2,.7,.2,1)}
 .cursor-dot.visible{opacity:1}
-.cursor-glow{position:fixed;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;filter:blur(9px);--x:50vw;--y:50vh;background-image:radial-gradient(circle 180px at var(--x) var(--y),rgba(78,205,196,.3),rgba(78,205,196,.06) 45%,transparent 73%)}
+.cursor-glow{position:fixed;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;filter:blur(6px);--x:50vw;--y:50vh;background-image:radial-gradient(circle 60px at var(--x) var(--y),rgba(78,205,196,.3),rgba(78,205,196,.06) 45%,transparent 73%)} /* 2026-10-21 辉光 180→60px */
 @media(pointer:fine){body.js-cursor,body.js-cursor *{cursor:none !important}}
 @media(pointer:coarse){.cursor-dot{display:none}.cursor-glow{display:none}}
 @media(prefers-reduced-motion:reduce){.cursor-glow{display:none}}
